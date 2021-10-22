@@ -36,8 +36,8 @@ all_things = [
 
 def get_pos(lst, char): # '==' is 'to'
     if char == ' ' or char == "'":
-        return seed_.get_values(seed_.seed, randrange(2))
-    else:  return [pos for pos, hello in enumerate(lst) if hello == char]
+        return seed_.get_values(seed_.seed, randrange(len(all_things)))
+    else:   return   [pos for pos, hello in enumerate(lst) if hello == char]
 
 class main:
     def __init__(self):
@@ -56,7 +56,7 @@ class main:
             print(' # menu #\n\n',
 
             '1 - login\n','2 - register\n')
-            answer = str(input('>>> '))
+            answer = str  (input('>>> '))
             if answer == str(1) or answer == str(2):
                 break
 
