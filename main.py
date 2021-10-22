@@ -46,7 +46,7 @@ class main:
     def prepare(self):
         if not path.exists('data.txt'):
             with open('data.txt', 'w') as file:
-                del self.prepare
+                del                             self.prepare
 
     def start(self):
         self.prepare()
@@ -82,10 +82,9 @@ class main:
         _passw = self.get_filter(passw)
         _passw = self.get_seed_into(_passw, _seed)
         if _usern == usern_ and _passw == passw_:
-            print('correct')
-        else:
-            print(1, _usern, 2, usern_)
-            print(1, _passw, 2, passw_)
+            print('correct :)')
+        else: # I tried so much time, for make this system. finally :)
+            print('uncorrect :(')
 
     def get_filter(self, passw):
         filtered_passw = []
@@ -121,7 +120,7 @@ class main:
             x = (int(len(passw) / len(seed)) * y)
             the_getded_passw.insert(x, seed[y-1])
         the_getded_passw = ''.join(the_getded_passw)
-        return the_getded_passw.split                  (' ')[0]
+        return the_getded_passw
 
 main, seed_ = main(), Seed()
 if __name__ == '__main__': main.start()
